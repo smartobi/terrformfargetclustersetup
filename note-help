@@ -1,0 +1,6 @@
+https://antonputra.com/amazon/create-aws-eks-fargate-using-terraform/#integrate-amazon-efs-with-aws-fargate
+
+
+1) after creating EKS cluster, we need to update the 
+
+aws eks update-kubeconfig --name SecOps-test --region us-east-1
