@@ -7,22 +7,22 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: php-apache
+  name: sonar-server
   namespace: staging
 spec:
   selector:
     matchLabels:
-      run: php-apache
+      run: sonar-server
   # remove replica if using gitops
   replicas: 1
   template:
     metadata:
       labels:
-        run: php-apache
+        run: sonar-server
     spec:
       containers:
-      - name: php-apache
-        image: k8s.gcr.io/hpa-example
+      - name: sonar-server
+        image: smartcloud2022/car-service:v1
         ports:
         - containerPort: 80
         resources:

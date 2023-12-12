@@ -2,10 +2,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: php-apache
+  name: sonar-server
   namespace: staging
 spec:
   ports:
   - port: 80
   selector:
-    run: php-apache
+    run: sonar-server

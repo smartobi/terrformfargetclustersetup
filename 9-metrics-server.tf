@@ -21,7 +21,7 @@ resource "helm_release" "metrics-server" {
 
   set {
     name  = "metrics.enabled"
-    value = false
+    value = true
   }
 
   depends_on = [aws_eks_fargate_profile.kube-system]

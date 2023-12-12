@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: php-apache-lb
+  name: sonar-server-lb
   namespace: staging
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: external
@@ -14,4 +14,4 @@ spec:
   ports:
   - port: 80
   selector:
-    run: php-apache
+    run: sonar-server
