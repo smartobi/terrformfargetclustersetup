@@ -47,7 +47,9 @@ jobs:
 
 
     - name: Terraform Apply Auto Deploy
-      run: terraform apply --auto-approve 
+      run: |
+          export KUBERNETES_MASTER=${{ env.KUBERNETES_MASTER }}
+          terraform apply --auto-approve 
 
     - name: Slack Notification
       uses: act10ns/slack@v1

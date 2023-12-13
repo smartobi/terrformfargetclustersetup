@@ -11,4 +11,6 @@ kubectl patch deployment coredns -n kube-system --type json -p='[{"op": "remove"
 2) It's very helpful when you need to debug Kubernetes issues.
 
 
+aws eks describe-cluster --name SecOps-test --region us-east-1
+
 kubectl get events -w -n kube-system
