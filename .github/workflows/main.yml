@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      SANDBOX_CLIENT_SECRET: ${{ secret.SANDBOX_CLIENT_SECRET }}
+      # SANDBOX_CLIENT_SECRET: ${{ secret.SANDBOX_CLIENT_SECRET }}
       SLACK_WEBHOOK_URL: ${{ secret.SLACK_WEBHOOK_URL }}
 
 
