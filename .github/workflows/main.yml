@@ -46,10 +46,12 @@ jobs:
       run: terraform plan -input=false
 
 
-    - name: Terraform Apply Auto Deploy
-      run: |
-          export KUBERNETES_MASTER=${{ env.KUBERNETES_MASTER }}
-          terraform apply --auto-approve 
+    # - name: Terraform Apply Auto Deploy
+    #   run: |
+    #       export KUBERNETES_MASTER=${{ env.KUBERNETES_MASTER }}
+    #       terraform apply --auto-approve 
+    - name: Terraform Destroy Auto Deploy
+      run: terraform destroy --auto-approve
 
     - name: Slack Notification
       uses: act10ns/slack@v1
@@ -59,6 +61,5 @@ jobs:
         channel: '#cicd_notification'
       if: always() 
 
-    # - name: Terraform Destroy Auto Deploy
-    #   run: terraform destroy --auto-approve
+    
 
