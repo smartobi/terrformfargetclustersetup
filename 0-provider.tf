@@ -1,7 +1,6 @@
-provider "aws" {
-  region = "us-east-1"
-  profile = "staging"
-}
+# provider "aws" {
+#   region = "us-east-1"
+# }
 
 variable "cluster_name" {
   default = "SecOps-test"
