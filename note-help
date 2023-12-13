@@ -4,3 +4,11 @@ https://antonputra.com/amazon/create-aws-eks-fargate-using-terraform/#integrate-
 1) after creating EKS cluster, we need to update the 
 
 aws eks update-kubeconfig --name SecOps-test --region us-east-1
+
+kubectl patch deployment coredns -n kube-system --type json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/eks.amazonaws.com~1compute-type"}]'
+
+
+2) It's very helpful when you need to debug Kubernetes issues.
+
+
+kubectl get events -w -n kube-system
