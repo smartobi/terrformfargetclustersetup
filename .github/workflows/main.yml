@@ -53,8 +53,8 @@ jobs:
         channel: '#cicd_notification'
       if: always()
 
-    # - name: Terraform Apply Auto Deploy
-    #   run: terraform apply --auto-approve  
+    - name: Terraform Apply Auto Deploy
+      run: terraform apply --auto-approve  
 
     # - name: Terraform Destroy Auto Deploy
     #   run: terraform destroy --auto-approve
