@@ -14,7 +14,7 @@ jobs:
 
     env:
       # SANDBOX_CLIENT_SECRET: ${{ secret.SANDBOX_CLIENT_SECRET }}
-      SLACK_WEBHOOK_URL: ${{ secret.SLACK_WEBHOOK_URL }}
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
 
     steps:
